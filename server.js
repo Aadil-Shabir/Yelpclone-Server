@@ -15,7 +15,7 @@ app.use(express.json());
 
 console.log("NODE ENV" ,process.env.NODE_ENV)
 
-app.get("/api/v1/restaurants", async (req, res) => {
+app.get("https://dry-plains-08452.herokuapp.com/api/v1/restaurants", async (req, res) => {
   try {
     // const result = await db.query("SELECT * FROM restaurants");
 
