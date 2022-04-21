@@ -17,4 +17,4 @@ module.exports = {
   query: (text, params) => pool.query(text, params),
 };
 
-process.env.NODE_ENV === "production" ? proConfig : devConfig
+// process.env.NODE_ENV === "production" ? proConfig : devConfig
