@@ -27,7 +27,9 @@ app.get("/api/v1/restaurants", async (req, res) => {
       data: {
         restaurants: restaurantsRatingData.rows,
       },
+
     });
+    console.log("NODE ENV" ,process.env.NODE_ENV)
   } catch (err) {
     console.log(err);
   }
