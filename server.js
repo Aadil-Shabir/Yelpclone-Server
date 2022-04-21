@@ -20,7 +20,7 @@ app.get("https://dry-plains-08452.herokuapp.com/api/v1/restaurants", async (req,
     // const result = await db.query("SELECT * FROM restaurants");
 
     const restaurantsRatingData = await db.query(
-      "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), TRUNC(AVG(rating), 1) AS average_rating FROM reviews GROUP BY restaurant_id) reviews ON restaurants.id = reviews.restaurant_id;"
+      "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), TRUNC(1.22265, 1) AS average_rating FROM reviews GROUP BY restaurant_id) reviews ON restaurants.id = reviews.restaurant_id;"
     );
 
     res.status(200).json({
