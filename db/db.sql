@@ -20,7 +20,7 @@ from restaurants
     left join(
         select restaurant_id,
             count(*),
-            TRUNC(AVG(rating, 1)) as average_rating
+            TRUNC(AVG(rating), 1) as average_rating
         from reviews
         group by restaurant_id
     ) reviews on restaurants.id = reviews.restaurant_id;
