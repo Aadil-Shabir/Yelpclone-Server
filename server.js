@@ -13,6 +13,8 @@ app.use(express.json());
 
 // Get all Restaurants
 
+console.log("NODE ENV" ,process.env.NODE_ENV)
+
 app.get("/api/v1/restaurants", async (req, res) => {
   try {
     // const result = await db.query("SELECT * FROM restaurants");
@@ -29,7 +31,6 @@ app.get("/api/v1/restaurants", async (req, res) => {
       },
 
     });
-    console.log("NODE ENV" ,process.env.NODE_ENV)
   } catch (err) {
     console.log(err);
   }
